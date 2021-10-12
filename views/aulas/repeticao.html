@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="theme-light">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <!-- Bootstrap, jquery, etc -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <!-- Nossos arquivos -->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleaulas.css" />
+
+    <title>TCC</title>
+  </head>
+  <body>
+    
+    <!-- NavBar-->
+    <div class="topnav" id="topnav">
+      
+      <a class="bar1" onclick="abrirSide()" onclick="fecharCover()"><i class="fas fa-bars bar"></i></a>
+      <a class="time1" onclick="abrirSide()" onclick="fecharCover()"><i class="fas fa-times time"></i></a>
+ 
+      <b>
+        <a href="/">Home</a>
+        <a href="/default">Aulas</a>
+
+        <label for="tema" class="label" style="cursor: pointer">
+          <a>
+            Mudar tema
+            <i id="sun" class="bi bi-sun-fill"></i>
+            <i id="moon" class="bi bi-moon-fill"></i>
+          </a>
+        </label>
+
+        <input
+          type="checkbox"
+          id="tema"
+          name="theme"
+          onchange="toggleTheme()"
+        />
+      </b>
+    </div>
+    
+    <!-- Sidebar -->
+    
+    <div class="conteudo">
+      
+              <div id="cover" onclick="fecharCover()"></div>
+
+    
+      <div class="sidebar">
+        
+        <a href="/algoritmo"><button class="classes">Algoritmo</button></a>
+        <a href="/tipos"><button class="classes">Tipos de Dados</button></a>
+        <a href="/variaveis"><button class="classes">Variáveis e operadores aritméticos</button></a>
+        <a href="/decisao"><button class="classes">Estruturas de Decisão</button></a>
+        <a href="#"><button class="classes" style="background-color: var(--color-primary); border-radius: 3px">Laços de Repetição</button></a>
+        <a href="/vetmat"><button class="classes">Vetores e Matrizes</button></a>
+        <a href="/funcao"><button class="classes">Funções</button></a>
+
+      </div>
+      
+      <br>
+      <div class="conteudo1">
+      <div class="a-container">
+          <div class="title">
+            <b>Laços de Repetição</b>
+          </div>
+          <div class="content">
+              Essa estrutura tem a função de repetir comandos até que uma condição seja satisfeita ou até alcançar um determinado número.
+          </div>
+      </div>
+        
+      <br>
+        
+      <div class="a-container">
+        <div class="title">
+          <b>Para:</b>
+        </div>
+        
+        <div class="content">
+            A estrutura “para” pode ser dividida em três partes: início da contagem, limite de contagem e iteração da contagem. Na primeira parte definimos qual valor iniciará a contagem. A segunda parte definimos o último valor a ser contado e o iteração e onde definimos como a contagem será feita, ou seja, de dois em dois, de um em um etc.
+        </div>
+        
+        <div class="example-script">
+          
+<pre>
+1    <span class="basico">para</span>(<span class="tipos">inteiro</span> i <span class="sinais">=</span> <span class="inteiros">0</span>; i <span class="sinais"><</span> <span class="inteiros">10</span>; i<span class="sinais">++</span>){                
+2       escreva(<span class="texto">"O índice é: "</span>, i, <span class="texto">"</span><span class="inteiros">\n</span><span class="texto">"</span>)<span class="anotacao"> //O "\n" é usado para pular linhas no compilador</span>         
+3    }
+</pre>
+          
+        </div>
+        
+        <div class="compiler">
+        
+            <p>Compilador</p>
+            <pre style="font-size: 14px">  
+O índice é: 0
+O índice é: 1
+O índice é: 2
+O índice é: 3
+O índice é: 4
+O índice é: 5
+O índice é: 6
+O índice é: 7
+O índice é: 8
+O índice é: 9
+            </pre>
+          </div>
+        <div class="content">
+            No exemplo acima, o ínicio da contagem corresponde a: i = 0, que define o primeiro índice do nosso contador como 0. O limite da contagem refere-se a: i < 10, que define o valor máximo do índice como 9. E a iteração da contagem que condiz com: i++, representando que nosso contador percorrerá de 1 em 1.
+        </div>
+        
+      </div>
+        
+      <br>
+        
+        <div class="a-container">
+           <div class="title">
+             <b>Enquanto:</b>
+          </div>
+          
+          <div class="content">
+              Na estrutura “enquanto” nós definimos uma condição no início e enquanto ela for satisfeita os comandos irão se repetir.
+          </div>
+          
+          <div class="example-script">
+            
+<pre>
+1    <span class="tipos">inteiro</span> i <span class="sinais">=</span> <span class="inteiros">10</span>
+2
+3    <span class="basico">enquanto</span>( i <span class="sinais">></span> <span class="inteiros">0</span>){                
+4       escreva(<span class="texto">"O índice é: "</span>, i, <span class="texto">"</span><span class="sinais">\n</span><span class="texto">"</span>)
+5       i <span class="sinais">=</span> i <span class="sinais">-</span> <span class="inteiros">1</span>
+6    }
+</pre>
+            
+          </div>
+          
+          <div class="compiler">
+        
+            <p>Compilador</p>
+            <pre style="font-size: 14px">  
+O índice é: 10
+O índice é: 9
+O índice é: 8
+O índice é: 7
+O índice é: 6
+O índice é: 5
+O índice é: 4
+O índice é: 3
+O índice é: 2
+O índice é: 1
+            </pre>
+          </div>
+          
+        </div>
+        
+        <br>
+        
+        <div class="a-container">
+          <div class="title">
+            <b>Faça Enquanto:</b>
+          </div>
+          
+          <div class="content">
+            Já na estrutura “faca enquanto” primeiro é executado os comandos e no fim é verificado a condição. Após ser verificada a condição, caso a mesma ainda seja satisfeita o programa irá executar mais uma vez até que a condição apresentada seja falsa
+          </div>
+          
+          <div class="example-script">
+<pre>
+1    <span class="tipos">inteiro</span> i <span class="sinais">=</span> <span class="inteiros">10</span>
+2
+3    <span class="basico">faca</span>{                
+4       escreva(<span class="texto">"O índice é: "</span>, i, <span class="texto">"</span><span class="sinais">\n</span><span class="texto">"</span>)
+5       i <span class="sinais">=</span> i <span class="sinais">-</span> <span class="inteiros">1</span>
+6    }<span class="basico">enquanto</span>( i <span class="sinais">></span> <span class="inteiros">0</span>)
+</pre>
+          </div>
+          
+          <div class="compiler">
+        
+            <p>Compilador</p>
+            <pre style="font-size: 14px">  
+O índice é: 10
+O índice é: 9
+O índice é: 8
+O índice é: 7
+O índice é: 6
+O índice é: 5
+O índice é: 4
+O índice é: 3
+O índice é: 2
+O índice é: 1
+            </pre>
+          </div>
+          
+        </div>
+        <br>
+      </div>
+    </div>
+    
+       <script src="script.js"></script>
+
+    
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="theme-light">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <!-- Bootstrap, jquery, etc -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <!-- Nossos arquivos -->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleaulas.css" />
+
+    <title>TCC</title>
+  </head>
+  <body>
+    
+    <!-- NavBar-->
+    <div class="topnav" id="topnav">
+      
+      <a class="bar1" onclick="abrirSide()" onclick="fecharCover()"><i class="fas fa-bars bar"></i></a>
+      <a class="time1" onclick="abrirSide()" onclick="fecharCover()"><i class="fas fa-times time"></i></a>
+ 
+      <b><a href="/">Home</a>
+        <a href="/default">Aulas</a>
+
+        <label for="tema" class="label" style="cursor: pointer">
+          <a>
+            Mudar tema
+            <i id="sun" class="bi bi-sun-fill"></i>
+            <i id="moon" class="bi bi-moon-fill"></i>
+          </a>
+        </label>
+
+        <input
+          type="checkbox"
+          id="tema"
+          name="theme"
+          onchange="toggleTheme()"
+        />
+      </b>
+    </div>
+      <!-- Sidebar -->
+
+      <div class="conteudo">
+        
+                <div id="cover" onclick="fecharCover()"></div>
+
+
+      <div class="sidebar">
+
+        <a href="/algoritmo"><button class="classes">Algoritmo</button></a>
+        <a href="/tipos"><button class="classes">Tipos de Dados</button></a>
+        <a href="#"><button class="classes" style="background-color: var(--color-primary); border-radius: 3px">Variáveis e operadores aritméticos</button></a>
+        <a href="/decisao"><button class="classes">Estruturas de Decisão</button></a>
+        <a href="/repeticao"><button class="classes">Laços de Repetição</button></a>
+        <a href="/vetmat"><button class="classes">Vetores e Matrizes</button></a>
+        <a href="/funcao"><button class="classes">Funções</button></a>
+
+      </div>
+        <br/>
+      <div class="conteudo1"> 
+        
+      <div class="a-container">
+          <div class="title">
+            <b>Variáveis</b>
+          </div>
+          <div class="content">
+              De maneira bem simples as variáveis são valores armazenados na memória do computador. Como o próprio nome sugere as variáveis são valores que variam, ou seja, podem ser alterados futuramente.
+              Quando criamos uma variável definimos dois elementos muito importante, o nome da variável e o tipo dela (inteiro, real, caracter, cadeia ou lógico). Com relação ao nome existe algumas regras que devem ser cumpridas:
+              <br>
+            <ul>
+              
+              <br>
+              <li>No nome da variável NÃO pode existir espaços: </li>
+              <div class="example-script">
+                <pre style="margin: 0"><span class="tipos">int</span> salario atual <span class="anotacao">//Esse formato está errado</span></pre>
+              </div>
+              
+              <br>
+              <li>Não é permitido o uso de acentos</li>
+               <div class="example-script">
+                <pre style="margin: 0"><span class="tipos">int</span> número <span class="anotacao">//Esse formato também está errado</span></pre>
+              </div>
+              
+              <br>
+              <li>Os nomes devem começar com letras ou underline</li>
+              <div class="example-script">
+                <pre style="margin: 0"><span class="tipos">real</span> media, _altura</pre>
+              </div>
+          
+            </ul>
+          </div>
+      </div>
+        <br>
+        <div class="a-container">
+          <div class="title">
+            <b>Declarando variáveis</b>
+          </div>
+          
+          <div class="content">
+            A declaração de variáveis segue a seguinte regra:
+            
+            Tipo de dado + nome da variável
+            
+            <div class="example-script">
+              <pre>
+1    <span class="tipos">inteiro</span> numero;
+2    <span class="tipos">real</span> media;
+3    <span class="tipos">logico</span> confirmacao;
+4    <span class="tipos">caracter</span> nome;
+5    <span class="tipos">cadeia</span> nome;</pre>
+            </div>
+          </div>
+        </div>
+        
+        <br>
+        
+        <div class= "a-container">
+          <div class="title">
+            <b>Atribuindo valores</b>
+          </div>
+          
+          <div class="content">
+              Para atribuirmos valores as variáveis utilizamos o operador lógico igual (=)
+            
+              <div class="example-script">
+                <pre>
+1  <span class="tipos">inteiro</span> numero<span class="sinais"> =</span> <span class="inteiros">1</span>
+2  <span class="tipos">real</span> media <span class="sinais">=</span> <span class="inteiros">1.0</span>
+3  <span class="tipos">logico</span> confirmacao <span class="sinais">=</span> <span class="inteiros">verdadeiro</span>
+4  <span class="tipos">caracter</span> nome <span class="sinais">=</span> <span class="texto">'P'</span>
+5  <span class="tipos">cadeia</span> sobrenome <span class="sinais">=</span> <span class="texto">"Portugol"</span></pre>  
+              </div>
+            É importante lembrar que quando atribuirmos um valor para a variável esse valor deve ser igual ao tipo da variável, ou seja, se a variável é do tipo inteiro devemos atribuir valores do tipo inteiro.
+          </div>
+        </div>
+        
+        <br>
+        
+        <div class="a-container">
+          <div class="title">
+            <b>Operadores Aritméticos</b>
+          </div>
+          
+          <div class="content">
+            Os operadores aritméticos são representados por símbolos, os quais tem a função de retratar as operações aritméticas.
+
+              <table>
+                <tr>
+                  <td>Operadores</td>
+                  <td>Significados</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>Subtração</td>
+                </tr>
+                <tr>
+                  <td>+</td>
+                  <td>Adição</td>
+                </tr>
+                <tr>
+                  <td>*</td>
+                  <td>Multiplicação</td>
+                </tr>
+                <tr>
+                  <td>/</td>
+                  <td>Divisão</td>
+                </tr>
+                <tr>
+                  <td>%</td>
+                  <td>Resto da divisão</td>
+                </tr>
+              </table>
+          </div>
+        </div>
+        <br>
+    </div>
+    </div>
+
+       <script src="script.js"></script>
+    
+    
+        </body>
+    </html>

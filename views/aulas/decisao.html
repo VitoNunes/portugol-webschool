@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="theme-light">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <!-- Bootstrap, jquery, etc -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+
+    <!-- Nossos arquivos -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleaulas.css" />
+
+    <title>TCC</title>
+  </head>
+  <body>
+    <!-- NavBar-->
+    <div class="topnav" id="topnav">
+      <a class="bar1" onclick="abrirSide()" onclick="fecharCover()"
+        ><i class="fas fa-bars bar"></i
+      ></a>
+      <a class="time1" onclick="abrirSide()" onclick="fecharCover()"
+        ><i class="fas fa-times time"></i
+      ></a>
+
+      <b
+        ><a href="/">Home</a>
+        <a href="/default">Aulas</a>
+
+        <label for="tema" class="label" style="cursor: pointer">
+          <a>
+            Mudar tema
+            <i id="sun" class="bi bi-sun-fill"></i>
+            <i id="moon" class="bi bi-moon-fill"></i>
+          </a>
+        </label>
+
+        <input
+          type="checkbox"
+          id="tema"
+          name="theme"
+          onchange="toggleTheme()"
+        />
+      </b>
+    </div>
+
+    <!-- Sidebar -->
+
+    <div class="conteudo">
+      <div id="cover" onclick="fecharCover()"></div>
+
+      <div class="sidebar">
+        <a href="/algoritmo"><button class="classes">Algoritmo</button></a>
+        <a href="/tipos"><button class="classes">Tipos de Dados</button></a>
+        <a href="/variaveis"
+          ><button class="classes">
+            Variáveis e operadores aritméticos
+          </button></a
+        >
+        <a href="#"
+          ><button
+            class="classes"
+            style="background-color: var(--color-primary); border-radius: 3px"
+          >
+            Estruturas de Decisão
+          </button></a
+        >
+        <a href="/repeticao"
+          ><button class="classes">Laços de Repetição</button></a
+        >
+        <a href="/vetmat"
+          ><button class="classes">Vetores e Matrizes</button></a
+        >
+        <a href="/funcao"><button class="classes">Funções</button></a>
+      </div>
+
+      <!-- Conteúdo -->
+      <br />
+
+      <div class="conteudo1">
+        <div class="a-container">
+          <div class="title">
+            <b>Estrutura de Decisão</b>
+          </div>
+          <div class="content">
+            As estruturas condicionais possibilitam a execução de um conjunto de
+            comandos quando determinada condição for satifeita ou não.
+          </div>
+          <div class="example-script" style="margin-bottom: 5px">
+            <pre>
+    <span class="basico">se</span>(frango_desfiado == <span class="texto">"possui"</span> <span class="basico">e</span> farinha == <span class="texto">"possui"</span>){                
+       escreva(<span class="texto">"É possível fazer a torta"</span>)                  
+    }<span class="basico">senao</span>{                  
+       escreva(<span class="texto">"Não é possível fazer a torta"</span>)            
+    }
+</pre>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="a-container">
+          <div class="title">
+            <b>Operadores relacionais</b>
+          </div>
+          <div class="content">
+            Os operadores relacionais são utilizados quando queremos comparar
+            valores com valores, variáveis com variáveis ou os dois
+
+            <table>
+              <tr>
+                <td>Operadores</td>
+                <td>Significados</td>
+              </tr>
+              <tr>
+                <td>></td>
+                <td>Maior</td>
+              </tr>
+              <tr>
+                <td><</td>
+                <td>Menor</td>
+              </tr>
+              <tr>
+                <td>>=</td>
+                <td>Maior e igual</td>
+              </tr>
+              <tr>
+                <td><=</td>
+                <td>Menor e igual</td>
+              </tr>
+              <tr>
+                <td>==</td>
+                <td>Igual</td>
+              </tr>
+              <tr>
+                <td>!=</td>
+                <td>Diferente</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="a-container">
+          <div class="title">
+            <b>Operadores lógicos</b>
+          </div>
+
+          <div class="content">
+            <table>
+              <tr>
+                <td>Operadores</td>
+                <td>Significados</td>
+              </tr>
+              <tr>
+                <td>e</td>
+                <td>Conectivo E</td>
+              </tr>
+              <tr>
+                <td>ou</td>
+                <td>Conectivo OU</td>
+              </tr>
+              <tr>
+                <td>nao</td>
+                <td>Negação</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="a-container">
+          <div class="title">
+            <b>Estrutura Se e Senao</b>
+          </div>
+
+          <div class="content">
+            A estrutura “se” e “senao” trabalham juntas, ou seja, uma depende da
+            outra. Quando estabelecemos uma condição a qual irá ser verificada
+            caso a condição seja satisfeita serão executados um conjunto de
+            comandos (os quais pertence a estrutura “se”). Se a condição não for
+            satisfeita irá ser executados os comandos pertencentes ao bloco do
+            “senao”
+          </div>
+
+          <div class="example-script" style="margin-bottom: 5px">
+            <pre>
+    <span class="basico">se</span>(condição) {
+      comandos
+    }
+    <span class="basico">senao</span> {
+      comandos
+    }</pre>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="a-container">
+          <div class="title">
+            <b>Se e senao encadeado</b>
+          </div>
+
+          <div class="content">
+            O se e senao encadeado consiste na ideia de ir verificando várias
+            condições sucessivamente.
+          </div>
+
+          <div class="example-script" style="margin-bottom: 5px">
+            <pre>
+    <span class="basico">se</span>(condição){
+       comandos                
+    }<span class="basico">senao se</span>(condição){                  
+       comandos           
+    }<span class="basico">senao se</span>(acondição){                  
+       comandos           
+    }<span class="basico">senao</span>{                  
+       comandos          
+    }
+</pre>
+
+            <!--<pre>
+1    <span class="basico">se</span>(aula == <span class="texto">"Matemática"</span>){
+2       escreva(<span class="texto">"Ir para aula de matemática"</span>)                  
+3    }<span class="basico">senao se</span>(aula == <span class="texto">"Português"</span>){                  
+4       escreva(<span class="texto">"Ir para aula de português"</span>)            
+5    }<span class="basico">senao se</span>(aula == <span class="texto">"Química"</span>){                  
+6       escreva(<span class="texto">"Ir para aula de química"</span>)            
+7    }<span class="basico">senao</span>{                  
+8       escreva(<span class="texto">"Ir para aula de física"</span>)            
+9    }
+</pre>-->
+          </div>
+        </div>
+
+        <br />
+
+        <div class="a-container">
+          <div class="title">
+            <b>Se e Senao aninhado</b>
+          </div>
+
+          <div class="content">
+            Já o se e senao aninhado trata-se da ideia de verificar uma condição
+            caso outra condição já tenha sido verificada.
+          </div>
+          <div class="example-script" style="margin-bottom: 5px">
+            <pre>
+    <span class="basico">se</span>(condição){
+       <span class="basico">se</span>(condição){
+         comandos
+       }<span class="basico">senao se</span>(condição){                  
+         comandos           
+       }
+    }<span class="basico">senao se</span>(condição){                  
+       <span class="basico">se</span>(condição){
+         comandos
+      }<span class="basico">senao se</span>(condição){                  
+        comandos           
+      }           
+   }
+</pre>
+
+            <!--<pre>
+1    <span class="basico">se</span>(aula == <span class="texto">"Matemática"</span>){
+2       <span class="basico">se</span>(dia == <span class="texto">"Segunda-feira"</span>){
+3         escreva(<span class="texto">"Ir para sala 2"</span>)
+4       }<span class="basico">senao se</span>(dia == <span class="texto">"Quinta-feira"</span>){                  
+5         escreva(<span class="texto">"Ir para sala 3"</span>)            
+6       }
+7    }<span class="basico">senao se</span>(aula == <span class="texto">"Português"</span>){                  
+8       <span class="basico">se</span>(dia == <span class="texto">"Terça-feira"</span>){
+9         escreva(<span class="texto">"Ir para sala 1"</span>)
+10      }<span class="basico">senao se</span>(dia == <span class="texto">"Segunda-feira"</span>){                  
+11        escreva(<span class="texto">"Ir para sala 2"</span>)            
+12      }           
+13   }
+</pre>-->
+          </div>
+        </div>
+
+        <br />
+
+        <div class="a-container">
+          <div class="title">
+            <b>Estrutura Escolha Caso</b>
+          </div>
+
+          <div class="content">
+            Esta estrutura possui uma funcionalidade muito parecida com o se e
+            senao encadeado, porém essa só pode ser aplicada em variáveis do
+            tipo inteiro e caracter.
+          </div>
+
+          <div class="example-script" style="margin-bottom: 5px">
+            <pre>
+    <span class="basico">Escolha</span> (variável_de_verificação){
+
+      <span class="basico">caso</span> <span class="sinais">valor1</span>:
+         comandos
+         pare <span class="anotacao">//impede a execução do próximo caso</span>
+         
+      <span class="basico">caso</span> <span class="sinais">valor2</span>:
+         comandos
+         pare <span class="anotacao">//impede a execução do próximo caso</span>
+         
+     <span class="basico">caso</span> <span class="sinais">valor3</span>:
+        comandos
+        pare <span class="anotacao">//impede a execução do próximo caso</span>
+        
+     }    
+</pre>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="a-container">
+          <div class="title">
+            <b>Estrutura Escolha Caso Contrário</b>
+          </div>
+
+          <div class="content">
+            A estrutura caso contrário tem a mesma funcionalidade que a
+            estrutura anterior, o diferencial é que agora temos uma estrutura
+            (caso contrário) que é executada quando as condições propostas não
+            são satisfeitas.
+          </div>
+
+          <div class="example-script" style="margin-bottom: 5px">
+            <pre>
+    <span class="basico">Escolha</span> (variável_de_verificação){
+
+      <span class="basico">caso</span> <span class="sinais">valor1</span>:
+         comandos
+         pare <span class="anotacao">//impede a execução do próximo caso</span>
+         
+      <span class="basico">caso</span> <span class="sinais">valor2</span>:
+         comandos
+        pare <span class="anotacao">//impede a execução do próximo caso</span>
+         
+     <span class="basico">caso contrario</span>: <span class="anotacao">//é executado para qualquer opção diferente dos casos anteriores</span>
+        comandos
+    
+    }    
+</pre>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

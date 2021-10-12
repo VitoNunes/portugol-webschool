@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="theme-light">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <!-- Bootstrap, jquery, etc -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"/>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- Nossos arquivos -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleaulas.css" />
+
+    <title>TCC</title>
+  </head>
+  <body>
+    <!-- NavBar-->
+    <div class="topnav" id="topnav">
+      
+      <a class="bar1" onclick="abrirSide()" onclick="fecharCover()"><i class="fas fa-bars bar"></i></a>
+      <a class="time1" onclick="abrirSide()" onclick="fecharCover()"><i class="fas fa-times time"></i></a>
+      
+        <b><a href="/">Home</a></b>
+        <b><a href="#">Aulas</a></b>
+
+        <label for="tema" class="label" style="cursor: pointer">
+          <a>
+            <b> Mudar tema</b>
+            <b> <i id="sun" class="bi bi-sun-fill"></i></b>
+            <b><i id="moon" class="bi bi-moon-fill"></i></b>
+          </a>
+        </label>
+
+        <input
+          type="checkbox" id="tema" name="theme" onchange="toggleTheme()"/>
+      
+    </div>
+    
+    <!-- Sidebar -->
+    
+    <div class="conteudo">
+      
+      <div id="cover" onclick="fecharCover()"></div>
+      
+      <div class="sidebar" style="">
+  
+        <a href="#"><button class="classes" style="background-color: var(--color-primary); border-radius: 3px">Algoritmo</button></a>
+        <a href="/tipos"><button class="classes">Tipos de Dados</button></a>
+        <a href="/variaveis"><button class="classes">Variáveis e operadores aritméticos</button></a>
+        <a href="/decisao"><button class="classes">Estruturas de Decisão</button></a>
+        <a href="/repeticao"><button class="classes">Laços de Repetição</button></a>
+        <a href="/vetmat"><button class="classes">Vetores e Matrizes</button></a>
+        <a href="/funcao"><button class="classes">Funções</button></a>
+          
+      </div>
+      
+      <!--<button class="arrow-btn"><i class="bi bi-arrow-bar-left"></i></button>-->
+    <!-- Conteúdo -->
+    
+    <br/>
+    
+    <div class="conteudo1">
+    <div class="a-container">
+      <div class="title">
+        <b>O que é um algoritmo?</b>
+      </div>
+
+      <div class="content">
+        Algoritmo é uma descrição sequencial e finita, sobre como resolver um determinado problema. Podemos ver exemplos no nosso dia a dia e a maioria deles nós nem percebemos, por exemplo, uma receita:
+      </div>
+      
+      
+      <div class="example-nonscript">
+        <b>Recheio:</b>
+        <ol>
+          <li>Cozinhe o peito de frango no caldo até ficar macio.</li>
+          <li>Separe 1 xícara (chá) de caldo do cozimento e reserve.</li>
+          <li>
+            Refogue os demais ingredientes e acrescente as ervilhas por último.
+          </li>
+          <li>Desfie o frango, misture ao caldo e deixe cozinhar até secar</li>
+        </ol>
+        <b>Massa:</b>
+        <ol>
+          <li>
+            Bata o leite, o óleo e os ovos no liquidificador em velocidade
+            baixa.
+          </li>
+          <li>Acrescente aos poucos a farinha, o sal e o fermento.</li>
+          <li>
+            Despeje metade da massa em uma forma untada e adicione o recheio
+            sobre ela.
+          </li>
+          <li>Cubra com o restante de massa e o queijo ralado.</li>
+          <li>Leve ao forno preaquecido (180° C) até dourar.</li>
+        </ol>
+      </div>
+
+      <div id="txt1" class="content">
+        A partir das instruções acima, o “problema” (fazer uma torta) foi
+        resolvido.
+      </div>
+    </div>
+
+    <br />
+
+    <div class="a-container">
+      <div class="title">
+        <b>Como criar um algoritmo?</b>
+      </div>
+
+      <div class="content">
+        O primeiro passo para criar um algoritmo é analisar o problema, ou seja,
+        o que você quer resolver. O próximo passo é identificar as suas
+        ferramentas para a resolução deste problema. Por conseguinte, deve-se
+        organizar essa solução, dividir o problema em pedaços e ir resolvendo um
+        de cada vez. E por último você deve organizar essa solução de forma
+        lógica.
+        <br /><br />Voltando para a receita...
+      </div>
+
+      <div class="example-nonscript">
+        <b>O que eu quero “resolver”?</b> Quero fazer uma torta. <br /><b
+          >Identificar as suas ferramentas:</b
+        >
+        Tenho liquidificador, forno, forma, os ingredientes etc. <br /><b
+          >Dividir o problema em pedaços:</b
+        >
+        Recheio e massa. <br /><b>Organizar essa solução de forma lógica:</b>
+        Aqui entra a receita da torta, que é a solução para o problema escrita.
+      </div>
+    </div>
+
+    <br />
+
+    <div class="a-container">
+      <div class="title">
+        <b>Representação do Algoritmo</b>
+      </div>
+
+      <div class="content">
+        O algoritmo pode ser descrito de 3 formas diferentes, os exemplos a
+        seguir são o cálculo da média aritmética de 4 valores:
+        <br /><br /><b>Linguagem informal (ou descrição narrativa)</b>:
+        basicamente neste tipo de representação o algoritmo é descrito na forma
+        de um texto.
+      </div>
+
+      <div class="example-nonscript">
+        <ol>
+          <li>Deve ser solicitado os 4 valores ao usuário</li>
+          <li>Calcular a média baseando-se na fórmula Media=(n1+n2+n3+n4)/4</li>
+          <li>A média deve ser exibida ao usuário</li>
+        </ol>
+      </div>
+
+      <div class="content">
+        A <b>linguagem formal (ou pseudocódigo)</b> consiste na linguagem
+        informal descrito utilizando uma linguagem de programação escolhida (No
+        nosso caso vai ser o Portugol, linguagem que vai ser utilizada ao
+        decorrer das aulas)
+      </div>
+
+      <div class="example-script">
+        <pre>
+1  <span class="basico">programa</span>
+2  {
+3	
+4	<span class="basico">funcao</span> inicio()
+5	{
+6              <span class="anotacao">//Nessas duas linhas abaixo é feito a criação das váriavéis (não precisa se preocupar com isso agora)</span>
+7		<span class="tipos">real</span> n1, n2, n3, n4
+8		<span class="tipos">real</span> media
+9
+10              escreva(<span class="texto">"Digite os valores para n1, n2, n3 e n4:<span class="inteiros">\n"</span></span>)
+11
+12		leia(n1, n2, n3, n4)  <span class="anotacao">//O comando leia é o que vai pegar os valores que você vai colocar</span>
+13    
+14		media <span class="sinais">=</span> (n1<span class="sinais">+</span>n2<span class="sinais">+</span>n3<span class="sinais">+</span>n4)<span class="sinais">/</span><span class="inteiros">4</span> <span class="anotacao">//Aqui ele vai fazer a conta</span>
+15    
+16		escreva(<span class="texto">"Resultado: "</span>, media) <span class="anotacao">//Aqui ele vai exibir a média para o usuário</span>
+17    
+18              <span class="anotacao">//Utilizando os valores 9, 8, 7.5, 7.5, obtemos o valor 8.0</span>
+19              <span class="anotacao">//Utilizando os valores 10, 2, 3, 2, obtemos o valor 4.25</span>
+20	}
+21  }</pre>
+      </div>
+      
+      <div class="compiler">
+        
+            <p>Compilador</p>
+            <pre style="font-size: 14px">
+Digite os valores para n1, n2, n3 e n4:
+9
+8
+7.5
+7.5
+
+Resultado: 8.0
+            </pre>
+            </div>
+      
+      <div id="txt2" class="content">
+        <br/>Caso queira testar o script acima (lembrando que para dispositivos
+        móveis a resolução fica um pouco ruim):
+        <a
+          href="https://portugol-webstudio.cubos.io/ide#share=wineby"
+          target="_blank"
+          ><button id="btn">Compilador</button></a
+        >
+      </div>
+      <div class="fluxograma">
+        <div class="content item7">
+          Por fim, temos o <b>fluxograma</b>, onde o algoritmo é representado
+          graficamente. Nesta representação instruções/comandos são
+          representadas por formas geométricas. Podemos ver isto no fluxograma a seguir.
+        </div>
+        <img class="item8 example-nonscript" src="https://cdn.glitch.com/7cfb86bf-10dc-4c68-aea9-9d117e76ee83%2Ffluxograma.svg?v=1626123059095">
+      </div>
+    </div>
+      <br>
+      </div>
+    </div>
+    
+   <script src="script.js"></script>
+
+    
+  </body>
+</html>

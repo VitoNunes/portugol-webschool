@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="theme-light">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links -->
+        <!-- Bootstrap, jquery, etc-->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+        <!-- Nossos arquivos -->
+            <script src="script.js"></script>
+            <link rel="stylesheet" href="style.css">
+
+    <title>TCC</title>
+</head>
+<body>
+    
+    <!-- NavBar-->
+        <div class="topnav" id="topnav">
+            <a href="#"><b>Home</b></a>
+            <a href="algoritmo"><b>Aulas</b></a>
+
+            <label for="tema" class="label">
+                <a>  
+                  <b>Mudar tema</b>
+                  <i id="sun" class="bi bi-sun-fill"></i>
+                  <i id="moon" class="bi bi-moon-fill"></i>
+                </a>
+            </label>
+           <input type="checkbox" id="tema" name="theme" onchange="toggleTheme()">
+        </div>
+
+    <!-- Banner -->
+        <div id="site-wrapper">
+            <span id="banner-title">Portugol Webschool</span>
+          <br><span class="banner-text">O objetivo do site é apresentar uma forma mais</span>
+          <br><span class="banner-text">prática de aprender lógica de programação</span>
+        </div>
+
+    
+    <div class="container-right">
+      
+      <div id="image-left-item" class="item1">      
+        <a href="https://br.freepik.com/vetores-gratis/equipe-de-negocios-montando-ilustracao-vetorial-plana-de-quebra-cabeca-isolado-parceiros-de-desenho-animado-trabalhando-em-conexao-conceito-de-trabalho-em-equipe-parceria-e-cooperacao_10606197.htm#page=1&query=team&position=0">
+        <img class="image" src="https://cdn.glitch.com/7cfb86bf-10dc-4c68-aea9-9d117e76ee83%2Ficon2.svg?v=1624222510215"></a>
+      </div>
+
+      <div id="text-right-item" class="item3">
+        <h3> Sobre nós</h3>
+        <p>Bem-vind@, somos um grupo de cinco estudantes de DS que buscam auxiliar os novos ingressantes nesta área de programação básica, nosso objetivo principal é incentivar de maneira didática e ao mesmo tempo prática seu desempenho.
+        <br>Esperamos que a força esteja com você! <br>(/◕ヮ◕)/</p>
+      </div>
+    
+    </div>
+  
+    <div class="container-left">
+      
+      <div id="image-right-item" class="item4">
+        <a href="https://br.freepik.com/vetores-gratis/ilustracao-do-conceito-de-equipe-criativa_10769819.htm#page=1&query=team&position=1">
+        <img class="image" src="https://cdn.glitch.com/7cfb86bf-10dc-4c68-aea9-9d117e76ee83%2Ficon3.svg?v=1624229567566"></a>
+      </div>
+      
+      
+      <div id="text-left-item" class="item6">
+        <h3>Sobre o projeto</h3>
+        <p>Com o atual cenário que favorece o ensino autônomo e a distância, buscamos disponibilizar recursos gratuitos que acrescentem na aprendizagem e teste de conhecimentos daqueles que buscam uma luz na área de programação. Desta maneira, esperamos guiar seus primeiros passos nesta vasta caminhada.
+        <br>Ao infinito e além! \ (•◡•) /</p>
+      </div>
+      
+          
+      
+    </div>
+  </body>
+</html>
+
+  
