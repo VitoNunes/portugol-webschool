@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="theme-light">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <!-- Bootstrap, jquery, etc -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <!-- Nossos arquivos -->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleaulas.css" />
+
+    <title>TCC</title>
+  </head>
+  <body>
+    
+    <!-- NavBar-->
+    <div class="topnav" id="topnav">
+      
+      <a class="bar1" onclick="abrirSide()" onclick="fecharCover()"><i class="fas fa-bars bar"></i></a>
+      <a class="time1" onclick="abrirSide()" onclick="fecharCover()"><i class="fas fa-times time"></i></a>
+ 
+      <b><a href="/">Home</a>
+        <a href="/default">Aulas</a>
+
+        <label for="tema" class="label" style="cursor: pointer">
+          <a>
+            Mudar tema
+            <i id="sun" class="bi bi-sun-fill"></i>
+            <i id="moon" class="bi bi-moon-fill"></i>
+          </a>
+        </label>
+
+        <input
+          type="checkbox"
+          id="tema"
+          name="theme"
+          onchange="toggleTheme()"
+        />
+      </b>
+    </div>
+    <!-- Sidebar -->
+    
+    <div class="conteudo">
+    
+              <div id="cover" onclick="fecharCover()"></div>
+
+      
+      <div class="sidebar">
+        
+        <a href="/algoritmo"><button class="classes">Algoritmo</button></a>
+        <a href="#"><button class="classes" style="background-color: var(--color-primary); border-radius: 3px">Tipos de Dados</button></a>
+        <a href="/variaveis"><button class="classes">Variáveis e operadores aritméticos</button></a>
+        <a href="/decisao"><button class="classes">Estruturas de Decisão</button></a>
+        <a href="/repeticao"><button class="classes">Laços de Repetição</button></a>
+        <a href="/vetmat"><button class="classes">Vetores e Matrizes</button></a>
+        <a href="/funcao"><button class="classes">Funções</button></a>
+
+      </div>
+      
+      <!-- Conteúdo -->
+      
+      <br>
+      
+      <div class="conteudo1">
+      
+      <div class="a-container">
+          <div class="title">
+            <b>Tipos de dados</b>
+          </div>
+          <div class="content">
+              Dados são valores atribuídos a uma entidade, os quais, expressam informações sobre essa entidade. Por exemplo, se observarmos uma bola de basquete podemos atribuir alguns valores a ela, tais como: laranja (cor), grande (tamanho), entre outras informações. Os principais e que nós utilizaremos frequentemente ao decorrer das aulas é o inteiro, real, cadeia, caracter e lógico
+          </div> 
+      </div>
+        <br>
+      <div class="a-container">
+          <div class="title">
+            <b>Inteiro</b>
+          </div>
+          <div class="content">
+              Esse tipo representa os valores numéricos, positivos e negativos e que não apresentam casas decimais
+          </div>
+          <div class="example-nonscript">
+              Exemplo: 1; 278; -87
+          </div>
+      </div>
+        <br>
+      <div class="a-container">
+          <div class="title">
+            <b>Real</b>
+          </div>
+          <div class="content">
+              Assim como o tipo anterior, o tipo real representa os números positivos e negativos. O diferencial é que esse tipo de dado apresenta casas decimais. Vale destacar que as casas decimais são separadas por pontos (.)          </div>
+          <div class="example-nonscript">
+              Exemplo: 2.5; -3.87
+          </div>
+      </div>
+        <br>
+      <div class="a-container">
+          <div class="title">
+            <b>Lógico</b>
+          </div>
+          <div class="content">
+              Este tipo de dado representa os valores verdadeiro ou falso
+          </div>
+          <div class="example-nonscript">
+              Exemplo: verdadeiro e falso
+          </div>
+      </div>
+        <br>
+      <div class="a-container">
+          <div class="title">
+            <b>Caracter</b>
+          </div>
+          <div class="content">
+              Representa valores com apenas um único caractere. O tipo caracter pode ser um caractere especial, letras ou números. Vale salientar que esses valores são representados por aspas simples (‘ ’).
+          </div>
+          <div class="example-nonscript">
+              Exemplo: ‘7’, ‘p’, ‘#’ 
+          </div>
+      </div>
+        <br>
+      <div class="a-container">
+          <div class="title">
+            <b>Cadeia</b>
+          </div>
+          <div class="content">
+              Este tipo de dado é bem similar ao anterior. Entretanto os valores podem ser representados por um ou mais caracteres, os quais devem ser representados por aspas dupla (“ ”)
+          </div>
+          <div class="example-nonscript">
+              Exemplo: “tecnologia”, “portugol”
+          </div>
+      </div>
+      <br>
+        
+      <div class="btn-container">  
+        Lista de exercícios sobre tipos de dado: <a href="/exercicios/exercicios1-tipos"><button id="btn">Ir para os exercícios</button></a>
+      </div>
+        
+        <br>
+      
+      </div>
+    </div>
+    
+       <script src="script.js"></script>
+
+  </body>
+</html>
